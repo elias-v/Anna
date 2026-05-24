@@ -1,0 +1,167 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // ─── Modell ───────────────────────────────────────────────────────────────
+  // Hauptmodell für alle Aufgaben
+  // "model": "opencode/deepseek/deepseek-v4-flash-free",
+     "model": "opencode/openai/gpt-oss-120b:free",
+  // "model": "google/gemini-2.5-flash",
+  // "model": "ollama-cloud/gpt-oss:120b",
+  // "model": "ollama-local/gpt-oss:20b",
+
+
+  // Günstiges Modell für einfache Aufgaben (z. B. Titelgenerierung)
+  "small_model": "opencode/deepseek-v4-flash-free",
+
+  // ─── Anbieter ─────────────────────────────────────────────────────────────
+  "provider": {
+    // OpenCode Zen free models sind bereits eingebaut, hier können weitere Anbieter hinzugefügt werden
+    // Ollama lokal
+    "ollama-local": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (lokal)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "gemma4:e4b": { "name": "gemma4:e4b" },
+        "gemma4:e2b": { "name": "gemma4:e2b" },
+        "gpt-oss:20b": { "name": "gpt-oss:20b" },
+        "llama3.1:8b": { "name": "llama3.1:8b" },
+        "qwen3:8b": { "name": "qwen3:8b" },
+        "qwen2.5:14b": { "name": "qwen2.5:14b" },
+        "qwen2.5:7b": { "name": "qwen2.5:7b" }
+      }
+    },
+      "ollama-cloud": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (Cloud)",
+      "options": {
+        "baseURL": "https://api.ollama.com/v1"
+        // API Key siehe in ~/.config/opencode/opencode.jsonc
+      },
+      "models": {
+        "gpt-oss:120b": { "name": "gpt-oss:120b" },
+        "gpt-oss:20b": { "name": "gpt-oss:20b" },
+        "qwen3-coder-next": { "name": "qwen3-coder-next" }
+      }
+    },
+    // OpenRouter – freie Modelle über die OpenRouter-Plattform
+    "openrouter": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OpenRouter",
+      "options": {
+        "baseURL": "https://openrouter.ai/api/v1"
+        // API Key siehe in ~/.config/opencode/opencode.jsonc
+      },
+      "models": {
+        "deepseek/deepseek-v4-flash:free": { "name": "deepseek/deepseek-v4-flash:free" },
+        "openai/gpt-oss-120b:free": { "name": "openai/gpt-oss-120b:free" },
+        "nvidia/nemotron-3-super-120b-a12b:free": { "name": "nvidia/nemotron-3-super-120b-a12b:free" },
+        "google/gemma-4-26b-a4b-it:free": { "name": "google/gemma-4-26b-a4b-it:free" },
+        "qwen/qwen3-coder:free": { "name": "qwen/qwen3-coder:free" }
+      }
+    },
+    // Google Gemini – Built-in-Provider für Google Generative AI
+    "google": {
+      "name": "Google Gemini" // Base-URL und Models sind in OpenCode bereits für Google Gemini konfiguriert
+        // API Key siehe in ~/.config/opencode/opencode.jsonc
+    }
+  },
+
+  // ─── Systemprompt / Anweisungen ───────────────────────────────────────────
+  // Pfade zu Markdown-Dateien, die als Systemprompt geladen werden
+  "instructions": [
+    "AGENTS.md",        // projektweite Regeln (z. B. Coding-Standards)
+    ".opencode/rules/*.md" // zusätzliche Regelsets per Glob
+  ],
+
+  // ─── Eigene Agenten ──────────────────────────────────────────────────────────────
+  "agent": {
+    "coder": {
+      "description": "Für alle Coding-bezogenen Aufgaben wie Code-Generierung, Refactoring und Bugfixes",
+      "model": "ollama-cloud/qwen3-coder-next",
+      "prompt": "Antworte immer auf Deutsch.",
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
+    },
+    "chat": {
+    "description": "Für allgemeine Fragen und Gespräche ohne Coding-Bezug",
+    // Nutzt das Default-Modell
+    "prompt": "Du bist ein hilfreicher Gesprächspartner. Beantworte allgemeine Fragen klar und verständlich auf Deutsch.",
+    "tools": {
+      "write": false,
+      "edit": false,
+      "bash": false
+    }
+  }
+  },
+
+  // Welcher Agent standardmäßig verwendet wird ("build" oder "plan" sind eingebaut)
+  "default_agent": "chat",
+
+  // ─── Tools ────────────────────────────────────────────────────────────────
+  "tools": {
+    // Bash-Ausführung global erlauben (auf false setzen für read-only Umgebungen)
+    "bash": true,
+    "write": true,
+    "edit": true
+  },
+
+  // ─── Berechtigungen ───────────────────────────────────────────────────────
+  
+  // "ask" = Bestätigung erforderlich, "allow" = immer erlaubt, "deny" = nie erlaubt
+  "permission": {
+    "bash": "ask",   // Terminal-Befehle immer bestätigen lassen
+    "edit": "ask", // Datei-Edits nur mit Bestätigung erlauben
+    "write": "ask"  // Neue Dateien nur mit Bestätigung erstellen
+  },
+
+  // ─── Benutzerdefinierte Befehle ───────────────────────────────────────────
+  "command": {
+    // /test  → führt Tests aus
+    "test": {
+      "description": "Führt die Test-Suite aus und zeigt Fehler",
+      "template": "Führe alle Tests aus und erstelle einen Coverage-Report. Zeige Fehler und schlage Fixes vor.",
+      "agent": "build",
+      "model": "ollama/gpt-oss:120b"
+    },
+    // /review → startet Code-Review
+    "review": {
+      "description": "Code-Review für aktuell geänderte Dateien",
+      "template": "Mache ein gründliches Code-Review der zuletzt geänderten Dateien.",
+      "agent": "coder"
+    }
+  },
+
+  // ─── Automatische Updates ─────────────────────────────────────────────────
+  // true = automatisch updaten, false = nie, "notify" = nur benachrichtigen
+  "autoupdate": "notify",
+
+  // ─── Kontextkomprimierung ─────────────────────────────────────────────────
+  "compaction": {
+    // Automatisch komprimieren wenn der Kontext voll wird
+    "auto": true,
+    // Alte Tool-Ausgaben entfernen um Token zu sparen
+    "prune": true
+  },
+
+  // ─── Datei-Watcher ────────────────────────────────────────────────────────
+  "watcher": {
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      ".git/**",
+      "*.log",
+      ".next/**",
+      "coverage/**"
+    ]
+  },
+
+  // ─── Teilen ───────────────────────────────────────────────────────────────
+  // "manual" = nur auf Anfrage, "auto" = immer, "disabled" = nie
+  "share": "manual"
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // ─── Modell ───────────────────────────────────────────────────────────────
+  // Hauptmodell für alle Aufgaben
+  "model": "ollama/gpt-oss:120b",
+
+  // Günstiges Modell für einfache Aufgaben (z. B. Titelgenerierung)
+  "small_model": "ollama/gpt-oss:20b",
+
+  // ─── Anbieter ─────────────────────────────────────────────────────────────
+  "provider": {
+    "ollama": {
+      "options": {
+        // API-Key aus Umgebungsvariable lesen (nicht hardcoden!)
+        "apiKey": "{env:ANTHROPIC_API_KEY}",
+
+        // Timeout in Millisekunden (Standard: 300000 = 5 Min.)
+        "timeout": 600000
+      }
+    }
+  },
+
+  // ─── Systemprompt / Anweisungen ───────────────────────────────────────────
+  // Pfade zu Markdown-Dateien, die als Systemprompt geladen werden
+  "instructions": [
+    "AGENTS.md",        // projektweite Regeln (z. B. Coding-Standards)
+    ".opencode/rules/*.md" // zusätzliche Regelsets per Glob
+  ],
+
+  // ─── Agenten ──────────────────────────────────────────────────────────────
+  "agent": {
+    // Eigener Agent z. B. für Code-Reviews
+    "coder": {
+      "description": "Für alle Coding-bezogenen Aufgaben wie Code-Generierung, Refactoring und Bugfixes",
+      "model": "ollama/gpt-oss:120b",
+      "prompt": "Antworte immer auf Deutsch.",
+      "tools": {
+        // Kein Schreiben erlaubt – nur lesen und kommentieren
+        "write": false,
+        "edit": false
+      }
+    },
+    "chat": {
+    "description": "Für allgemeine Fragen und Gespräche ohne Coding-Bezug",
+    "model": "ollama/gpt-oss:120b",
+    "prompt": "Du bist ein hilfreicher Gesprächspartner. Beantworte allgemeine Fragen klar und verständlich auf Deutsch.",
+    "tools": {
+      "write": false,
+      "edit": false,
+      "bash": false
+    }
+  }
+  },
+
+  // Welcher Agent standardmäßig verwendet wird ("build" oder "plan" sind eingebaut)
+  "default_agent": "chat",
+
+  // ─── Tools ────────────────────────────────────────────────────────────────
+  "tools": {
+    // Bash-Ausführung global erlauben (auf false setzen für read-only Umgebungen)
+    "bash": true,
+    "write": true,
+    "edit": true
+  },
+
+  // ─── Berechtigungen ───────────────────────────────────────────────────────
+  // "ask" = Bestätigung erforderlich, "allow" = immer erlaubt, "deny" = nie erlaubt
+  "permission": {
+    "bash": "ask",   // Terminal-Befehle immer bestätigen lassen
+    "edit": "ask", // Datei-Edits nur mit Bestätigung erlauben
+    "write": "ask"  // Neue Dateien nur mit Bestätigung erstellen
+  },
+
+  // ─── Benutzerdefinierte Befehle ───────────────────────────────────────────
+  "command": {
+    // /test  → führt Tests aus
+    "test": {
+      "description": "Führt die Test-Suite aus und zeigt Fehler",
+      "template": "Führe alle Tests aus und erstelle einen Coverage-Report. Zeige Fehler und schlage Fixes vor.",
+      "agent": "build",
+      "model": "ollama/gpt-oss:120b"
+    },
+    // /review → startet Code-Review
+    "review": {
+      "description": "Code-Review für aktuell geänderte Dateien",
+      "template": "Mache ein gründliches Code-Review der zuletzt geänderten Dateien.",
+      "agent": "coder"
+    }
+  },
+
+  // ─── TUI (Terminal-Oberfläche) ────────────────────────────────────────────
+  "tui": {
+    "scroll_speed": 3,
+    "scroll_acceleration": {
+      "enabled": true
+    },
+    // "auto" passt sich der Terminal-Breite an, "stacked" erzwingt eine Spalte
+    "diff_style": "auto"
+  },
+
+  // ─── Theme ────────────────────────────────────────────────────────────────
+  "theme": "gruvbox",
+
+  // ─── Automatische Updates ─────────────────────────────────────────────────
+  // true = automatisch updaten, false = nie, "notify" = nur benachrichtigen
+  "autoupdate": "notify",
+
+  // ─── Kontextkomprimierung ─────────────────────────────────────────────────
+  "compaction": {
+    // Automatisch komprimieren wenn der Kontext voll wird
+    "auto": true,
+    // Alte Tool-Ausgaben entfernen um Token zu sparen
+    "prune": true
+  },
+
+  // ─── Datei-Watcher ────────────────────────────────────────────────────────
+  "watcher": {
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      ".git/**",
+      "*.log",
+      ".next/**",
+      "coverage/**"
+    ]
+  },
+
+  // ─── Teilen ───────────────────────────────────────────────────────────────
+  // "manual" = nur auf Anfrage, "auto" = immer, "disabled" = nie
+  "share": "manual"
+}
