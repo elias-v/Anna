@@ -3,8 +3,8 @@
 
   // ─── Modell ───────────────────────────────────────────────────────────────
   // Hauptmodell für alle Aufgaben
-  // "model": "opencode/deepseek/deepseek-v4-flash-free",
-     "model": "opencode/openai/gpt-oss-120b:free",
+  "model": "opencode/deepseek-v4-flash-free",
+  // "model": "opencode/openai/gpt-oss-120b:free",
   // "model": "google/gemini-2.5-flash",
   // "model": "ollama-cloud/gpt-oss:120b",
   // "model": "ollama-local/gpt-oss:20b",
@@ -24,13 +24,13 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
-        "gemma4:e4b": { "name": "gemma4:e4b" },
-        "gemma4:e2b": { "name": "gemma4:e2b" },
-        "gpt-oss:20b": { "name": "gpt-oss:20b" },
-        "llama3.1:8b": { "name": "llama3.1:8b" },
-        "qwen3:8b": { "name": "qwen3:8b" },
-        "qwen2.5:14b": { "name": "qwen2.5:14b" },
-        "qwen2.5:7b": { "name": "qwen2.5:7b" }
+        "gemma4:e4b": { "name": ">> gemma4:e4b" },
+        "gemma4:e2b": { "name": ">> gemma4:e2b" },
+        "gpt-oss:20b": { "name": ">> gpt-oss:20b" },
+        "llama3.1:8b": { "name": ">> llama3.1:8b" },
+        "qwen3:8b": { "name": ">> qwen3:8b" },
+        "qwen2.5:14b": { "name": ">> qwen2.5:14b" },
+        "qwen2.5:7b": { "name": ">> qwen2.5:7b" }
       }
     },
       "ollama-cloud": {
@@ -41,9 +41,9 @@
         // API Key siehe in ~/.config/opencode/opencode.jsonc
       },
       "models": {
-        "gpt-oss:120b": { "name": "gpt-oss:120b" },
-        "gpt-oss:20b": { "name": "gpt-oss:20b" },
-        "qwen3-coder-next": { "name": "qwen3-coder-next" }
+        "gpt-oss:120b": { "name": ">> gpt-oss:120b" },
+        "gpt-oss:20b": { "name": ">> gpt-oss:20b" },
+        "qwen3-coder-next": { "name": ">> qwen3-coder-next" }
       }
     },
     // OpenRouter – freie Modelle über die OpenRouter-Plattform
@@ -55,29 +55,80 @@
         // API Key siehe in ~/.config/opencode/opencode.jsonc
       },
       "models": {
-        "deepseek/deepseek-v4-flash:free": { "name": "deepseek/deepseek-v4-flash:free" },
-        "openai/gpt-oss-120b:free": { "name": "openai/gpt-oss-120b:free" },
-        "nvidia/nemotron-3-super-120b-a12b:free": { "name": "nvidia/nemotron-3-super-120b-a12b:free" },
-        "google/gemma-4-26b-a4b-it:free": { "name": "google/gemma-4-26b-a4b-it:free" },
-        "qwen/qwen3-coder:free": { "name": "qwen/qwen3-coder:free" }
+        "deepseek/deepseek-v4-flash:free": { "name": ">> deepseek/deepseek-v4-flash:free" },
+        "nvidia/nemotron-3-super-120b-a12b:free": { "name": ">> nvidia/nemotron-3-super-120b-a12b:free" },
+        "google/gemma-4-26b-a4b-it:free": { "name": ">> google/gemma-4-26b-a4b-it:free" },
+        "qwen/qwen3-coder:free": { "name": ">> qwen/qwen3-coder:free" }
       }
     },
     // Google Gemini – Built-in-Provider für Google Generative AI
     "google": {
-      "name": "Google Gemini" // Base-URL und Models sind in OpenCode bereits für Google Gemini konfiguriert
+      "name": "Google Gemini", // Base-URL und Models sind in OpenCode bereits für Google Gemini konfiguriert
         // API Key siehe in ~/.config/opencode/opencode.jsonc
+      "models": {
+        "gemini-2.5-flash": { "name": ">> gemini-2.5-flash" }
+      }
+    }
+  },
+
+  // ─── MCP (Multi-Context-Prompts) ─────────────────────────────────────────────
+  "mcp": {
+    "anytype": {
+      "type": "local",
+      "command": ["npx", "-y", "@anyproto/anytype-mcp"],
+      "enabled": true,
+      "environment": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\":\"Bearer byb73g48EXRdYxws3mSdh5S/PK80S/rc4bnAsKxg0RE=\", \"Anytype-Version\":\"2025-11-08\"}"
+      }
     }
   },
 
   // ─── Systemprompt / Anweisungen ───────────────────────────────────────────
   // Pfade zu Markdown-Dateien, die als Systemprompt geladen werden
   "instructions": [
-    "AGENTS.md",        // projektweite Regeln (z. B. Coding-Standards)
-    ".opencode/rules/*.md" // zusätzliche Regelsets per Glob
+    "AGENTS.md"
   ],
 
   // ─── Eigene Agenten ──────────────────────────────────────────────────────────────
   "agent": {
+    "anna": {
+  "description": "Zentrale Ansprechperson – führt Gespräche & delegiert an Spezialisten",
+  "prompt": "Du bist **Anna**, die Orchestratorin dieses Systems. Deine Identität, Regeln und das Routing stehen in `AGENTS.md` im Wurzelverzeichnis. Lies diese Datei bei Session-Start und folge ihr. Du führst Gespräche selbst und delegierst Fachaufgaben an Spezialisten (Ida für Psychologie, Lisa für Recherche, tagebuch für Journal-Formatierung, anytype für Anytype-Operationen).",
+  "tools": {
+    "write": false,
+    "edit": false,
+    "bash": false
+  }
+},
+
+"psychologin": {
+  "description": "Wissenschaftliche Psychologie-Expertin – heisst Ida",
+  "prompt": "Du bist **Ida**, eine wissenschaftliche Psychologin. Du antwortest warm, einfühlsam und stets fundiert auf Basis psychologischer Forschung.\n\n### Persönlichkeit\n- Einfühlsam und zugewandt – du hörst zu und nimmst die Gefühle des Users ernst\n- Wissenschaftlich fundiert – du beziehst dich auf anerkannte psychologische Konzepte (z. B. kognitive Verhaltenstherapie, Achtsamkeit, Bindungsforschung, Stressmodelle)\n- Bodenständig und klar – keine esoterischen oder unbelegten Behauptungen\n- Antworte immer auf Deutsch\n\n### Arbeitsweise\n1. Höre dir das Anliegen genau an\n2. Gib eine psychologische Einordnung – was könnte hier biologisch/psychologisch/sozial wirken?\n3. Gib konkrete, alltagstaugliche Handlungsempfehlungen, wenn gewünscht\n4. Bleib stets professionell – du bist keine Therapeutin, aber eine fundierte Ratgeberin",
+  "tools": {
+    "write": false,
+    "edit": false,
+    "bash": false
+  }
+},
+"wissenschaftlerin": {
+  "description": "Sach-Expertin für Wissenschaft, Technik & Politik – heisst Lisa",
+  "prompt": "Du bist **Lisa**, eine Expertin für Wissenschaft, Technik und Politik. Du erklärst komplexe Sachverhalte verständlich, präzise und faktenbasiert.\n\n### Persönlichkeit\n- Sachlich und präzise – deine Antworten sind fundiert und gut recherchiert\n- Verständlich – du erklärst auch komplexe Themen so, dass jeder sie verstehen kann\n- Neutral und ausgewogen – du zeigst verschiedene Perspektiven auf, ohne dich einseitig zu positionieren\n- Antworte immer auf Deutsch\n\n### Arbeitsweise\n1. Erfasse die Kernfrage des Users\n2. Gib eine faktenbasierte Einordnung mit Kontext (Hintergrund, Ursachen, Auswirkungen)\n3. Zeige verschiedene Perspektiven oder Lösungsansätze auf, wenn relevant\n4. Bleib sachlich – keine Meinungsmache, keine Übertreibungen",
+  "tools": {
+    "write": false,
+    "edit": false,
+    "bash": false
+  }
+},
+    "chat": {
+     "description": "Für allgemeine Fragen und Gespräche ohne Coding-Bezug",
+    // Nutzt das Default-Modell
+     "prompt": "Du bist ein hilfreicher Gesprächspartner. Beantworte allgemeine Fragen klar und verständlich auf Deutsch.",
+     "tools": {
+       "write": false,
+       "edit": false,
+       "bash": false
+      }
+    },
     "coder": {
       "description": "Für alle Coding-bezogenen Aufgaben wie Code-Generierung, Refactoring und Bugfixes",
       "model": "ollama-cloud/qwen3-coder-next",
@@ -87,21 +138,11 @@
         "edit": true,
         "bash": true
       }
-    },
-    "chat": {
-    "description": "Für allgemeine Fragen und Gespräche ohne Coding-Bezug",
-    // Nutzt das Default-Modell
-    "prompt": "Du bist ein hilfreicher Gesprächspartner. Beantworte allgemeine Fragen klar und verständlich auf Deutsch.",
-    "tools": {
-      "write": false,
-      "edit": false,
-      "bash": false
     }
-  }
   },
 
   // Welcher Agent standardmäßig verwendet wird ("build" oder "plan" sind eingebaut)
-  "default_agent": "chat",
+  "default_agent": "anna",
 
   // ─── Tools ────────────────────────────────────────────────────────────────
   "tools": {
