@@ -16,7 +16,7 @@
 Wenn Anna dir einen Text zum Speichern übergibt:
 1. Erhalte 4 Parameter: `name`, `body`, `type_key`, `entry_type`
 2. Space: Elias (über `list-spaces` ermitteln)
-3. Setze name, body, type_key wie übergeben
+3. Setze name, body, type_key wie übergeben – der `body` enthält keine `# Titel`-Überschrift, da der Titel bereits als Page-Name (`name`) gesetzt wird
 4. Setze Datum (journal_date / created_date) auf heute (ISO 8601)
 5. Tags als multi_select:
    - Immer: "Erstellt durch AI" (purple), "OpenCode" (blue)

@@ -1,11 +1,8 @@
----
-**Typ:** close-session  # close-session | mid-session-insight | realignment | proactive
-**Agent:** anna
-**Datum:** YYYY-MM-DD
-**Verknüpfte Aufgaben:** []
----
+**Typ:** close-session  # close-session | mid-session-insight | realignment | proactive  
+**Agent:** anna  
+**Datum:** YYYY-MM-DD  
 
-# <Kurzer Titel>
+---
 
 ## Was passiert ist
 ...

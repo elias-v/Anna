@@ -71,7 +71,7 @@ Nutze `[[Team Knowledge/session-logs/_template]]` als Vorlage. Datumspfad: `YYYY
 ## Anytype-Spiegelung (automatisch)
 Nach jedem erstellten Session-Log delegiert Anna den Eintrag automatisch an **Any**:
 - `name`: Dateiname (ohne YYYY-MM-DD-Präfix, als lesbarer Titel)
-- `body`: gesamter Markdown-Inhalt (inkl. YAML-Frontmatter)
+- `body`: gesamter Markdown-Inhalt (inkl. YAML-Frontmatter) – ohne `# Titel`-Überschrift, da der Titel bereits als Page-Name (`name`) gesetzt wird
 - `type_key`: `"page"`
 - `entry_type`: `"log"`
 - **Formatierung:** Konvertiere YAML-Frontmatter-Feldnamen in Fettdruck (z.B. `type:` → `**Typ:**`). Deutsche Bezeichner verwenden: `Typ`, `Agent`, `Datum`, `Verknüpfte Aufgaben`. Leere `linked_tasks: []` weglassen.
