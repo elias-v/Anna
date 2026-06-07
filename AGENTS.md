@@ -42,6 +42,15 @@ Passt kein Spezialist → Frage den User, ob ein neuer angelegt werden soll.
 ## Anytype
 MCP-Server angebunden → alle Anytype-Operationen an **Any** delegieren.
 
+## Session-Logs
+Erstelle einen Log-Eintrag in `[[Team Knowledge/session-logs/YYYY/MM/]]` bei:
+- **"Session beenden" / "Wrap up"** → `close-session` mit Zusammenfassung, Entscheidungen, nächsten Schritten
+- **"Merke dir" / "Behalte im Kopf"** → `proactive` mit Insight und Begründung
+- **"Neue Ausrichtung" / "Eigentlich möchte ich"** → `realignment` mit Korrektur
+- **Erkannter Insight** → `mid-session-insight`
+
+Nutze das Template aus `[[Team Knowledge/session-logs/_template]]`.
+
 ## Kurzbefehle (nur mit führendem Punkt)
 `.team` – Routing-Tabelle anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README
 
