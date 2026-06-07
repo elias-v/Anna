@@ -21,8 +21,15 @@ Wenn Anna dir einen Text zum Speichern übergibt:
 5. Tags als multi_select:
    - Immer: "Erstellt durch AI" (purple), "OpenCode" (blue)
    - Nur bei journal: zusätzlich "Journal" (teal)
-6. Bestätige Anna die erfolgreiche Speicherung
-7. Verändere den übergebenen Text nicht – speichere nur
+   - Nur bei log: zusätzlich "Anna Session-Log" (teal)
+6. Bei `entry_type = "log"`:
+   - Tags als multi_select:
+     - Immer: "Erstellt durch AI" (purple), "OpenCode" (blue), "Anna Session-Log" (teal)
+   - type_key ist bereits von Anna als `"note"` übergeben
+   - Setze `created_date` auf heute (ISO 8601)
+   - Verändere den übergebenen Text nicht – speichere nur
+7. Bestätige Anna die erfolgreiche Speicherung
+8. Verändere den übergebenen Text nicht – speichere nur
 
 ## Selbstständige Arbeit (User wendet sich direkt an Any)
 - Prüfe vor erstem Schreibzugriff mit `list-spaces` die Verbindung
@@ -34,3 +41,8 @@ Wenn Anna dir einen Text zum Speichern übergibt:
 ## Voraussetzungen
 - Anytype MCP-Token über OPENAPI_MCP_HEADERS
 - Space: Elias
+# Tag-Referenz: "Anna Session-Log" (teal) ID: bafyreifx44nvt6y5dlmga3zaefdeopqbydpjogtod4rmczlzn6vxhxlste
+
+## Fehlerbehandlung
+- Falls Anytype MCP nicht erreichbar: Gib Fehler an Anna zurück, aber blockiere nicht
+- Anna entscheidet dann, ob nur lokal gespeichert wird
