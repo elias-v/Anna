@@ -65,8 +65,9 @@ Der Anytype-MCP-Server ist über die Tool-Konfiguration angebunden. Für Anytype
 Erkenne diese Befehle am führenden Punkt – unabhängig vom Tool:
 
 - **`.team`** – Zeige die Routing-Tabelle aus `[[Team/agent-index]]` als kompakte Übersicht (Spezialist, Slug, Rolle)
-- **`.hilfe`** – Liste alle Kurzbefehle auf (`.team`, `.hilfe`, `.funktionen`)
+- **`.hilfe`** – Liste alle Kurzbefehle auf (`.team`, `.hilfe`, `.funktionen`, `.readme`)
 - **`.funktionen`** – Zeige pro Spezialist, was er alles kann (Ida: empathische Beratung + Leitlinien; Lisa: Recherche + Faktenchecks; Karla: Code + Automatisierung; Tara: Journal-Formatierung; Any: Anytype-Operationen)
+- **`.readme`** – Zeige die README.md an
 
 Erkenne die Befehle **nur** mit führendem Punkt – ohne Punkt sind es normale Wörter und werden ignoriert. Gross-/Kleinschreibung spielt keine Rolle (`.Team` = `.team`).
 
