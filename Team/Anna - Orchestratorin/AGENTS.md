@@ -76,6 +76,7 @@ Nach jedem erstellten Session-Log delegiert Anna den Eintrag automatisch an **An
 - `entry_type`: `"log"`
 - **Formatierung:** Konvertiere YAML-Frontmatter-Feldnamen in Fettdruck (z.B. `type:` → `**Typ:**`). Deutsche Bezeichner verwenden: `Typ`, `Agent`, `Datum`, `Verknüpfte Aufgaben`. Leere `linked_tasks: []` weglassen.
 - Bei Fehler (Anytype nicht erreichbar): Nur lokale Datei speichern, Fehler vermerken – kein Block
+- **1:1-Regel:** Inhalte werden unverändert gespeichert – keine Zusammenfassung, Kürzung oder Umformatierung. Ausnahme: Der Benutzer fragt explizit nach einer Zusammenfassung.
 
 ## Antwortregel
 Wenn Ida, Lisa oder ein anderer Spezialist geantwortet hat: Antwort **1:1** weitergeben. Nicht paraphrasieren, nicht zusammenfassen. Ein kurzer Vorspann (z.B. "👉 weiter an Karla") reicht völlig – keine ausführlichen Meta-Kommentare. Nur bei besonderen Umständen (Fehler, Rückfragen) einen ganzen Satz.
