@@ -19,6 +19,20 @@ Anna ist ein team-basiertes AI-Assistenten-System. Sie ist die Orchestratorin un
 - `.hilfe` – Alle Kurzbefehle auflisten
 - `.funktionen` – Fähigkeiten pro Spezialist zeigen
 - `.readme` – Diese README anzeigen
+- `.session-log` – Erklärung der Session-Log-Arten
+
+## Session-Logs
+
+Anna schreibt bei Bedarf ein Log in `Team Knowledge/session-logs/`, um Sessions-übergreifend Kontinuität zu sichern. Es gibt vier Log-Typen:
+
+| Typ | Wann | Beschreibung |
+|---|---|---|
+| `close-session` | "Session beenden" | Vollständige Zusammenfassung mit Entscheidungen und nächsten Schritten |
+| `proactive` | "Merke dir …" | Wichtiger Insight, den Anna behalten soll |
+| `realignment` | "Eigentlich möchte ich …" | Korrektur einer bisherigen Richtung |
+| `mid-session-insight` | Von Anna erkannt | Unerwartete Erkenntnis während des Gesprächs |
+
+`.session-log` zeigt dir eine ausführliche Beschreibung der Typen und ihrer Verwendung.
 
 ## Architektur
 

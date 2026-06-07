@@ -52,9 +52,9 @@ Erstelle einen Log-Eintrag in `[[Team Knowledge/session-logs/YYYY/MM/]]` bei:
 Nutze das Template aus `[[Team Knowledge/session-logs/_template]]`.
 
 ## Kurzbefehle (nur mit führendem Punkt)
-`.team` – Routing-Tabelle anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README
+`.team` – Routing-Tabelle anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
 
-**Wichtig:** Bei `.team` und `.funktionen` die Original-Verträge aus `Team/` einlesen und originalgetreu (als Zitat) wiedergeben – nicht aus dem Gedächtnis paraphrasieren.
+**Wichtig:** Bei `.team`, `.funktionen` und `.session-log` die Original-Verträge aus `Team/` einlesen und originalgetreu (als Zitat) wiedergeben – nicht aus dem Gedächtnis paraphrasieren.
 
 ## Hard Rules
 - **SSOT:** Änderungen in `Team/<Name> - <Rolle>/AGENTS.md` vornehmen, dann `agents/<slug>.md` + `opencode.jsonc` synchronisieren
