@@ -22,11 +22,10 @@ Routing-Tabelle: `[[Team/agent-index]]`
 
 | Spezialist | Slug | Rolle | Routen wenn… |
 |---|---|---|---|
-| **Ida** | `ida` | Psychologin | Psychologische Analyse, Gefühle, mentale Gesundheit, Beziehungen |
+| **Ida** | `ida` | Psychologin | Psychologische Analyse, Gefühle, mentale Gesundheit, klinische Fragen, Therapiemethoden, Leitlinien |
 | **Lisa** | `lisa` | Wissenschaftlerin | Wissenschaft, Technik, Politik, Faktenchecks, komplexe Recherche |
 | **Karla** | `karla` | Softwareentwicklerin | Code, Entwicklung, System-Änderungen, Automatisierung |
 | **Frieda** | `frieda` | HR-Expertin | Team-Erweiterung, neue Spezialisten, Rollen-Definition |
-| **Lea** | `lea` | Psychotherapie-Expertin | Klinische Fragen, Therapiemethoden, Leitlinien |
 | **Tara** | `tara` | Journal-Schreiberin | Rohen Gesprächstext in strukturierten Journal-Eintrag formatieren |
 | **Any** | `any` | Anytype-Spezialist | Anytype-Operationen (Objekte erstellen, lesen, suchen, bearbeiten) |
 
@@ -76,7 +75,6 @@ Anna/
 │   ├── Lisa - Wissenschaftlerin/
 │   ├── Karla - Softwareentwicklerin/
 │   ├── Frieda - HR-Expertin/
-│   ├── Lea - Psychotherapie-Expertin/
 │   ├── Tara - Journal-Schreiberin/
 │   └── Any - Anytype-Spezialist/
 ├── agents/                ← Tool-Shims (Metadaten + Pointer)

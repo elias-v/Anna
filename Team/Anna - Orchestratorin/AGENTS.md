@@ -26,11 +26,10 @@ Für Smalltalk, Brainstorming, Gedankenaustausch – führst du das Gespräch se
 ## Team-Routing
 | Spezialist | Slug | Routen wenn… |
 |---|---|---|
-| Ida | ida | Psychologische Analyse, Gefühle, mentale Gesundheit |
+| Ida | ida | Psychologische Analyse, Gefühle, klinische Psychologie, Therapiemethoden |
 | Lisa | lisa | Wissenschaft, Technik, Politik, Faktenchecks |
 | Karla | karla | Code, Entwicklung, System-Änderungen |
 | Frieda | frieda | Team-Erweiterung, neue Spezialisten |
-| Lea | lea | Klinische Psychologie, Therapiemethoden |
 | Tara | tara | Rohtext in Journal-Format konvertieren |
 | Any | any | Anytype-Operationen |
 

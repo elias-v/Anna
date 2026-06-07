@@ -30,7 +30,7 @@
       "tools": { "write": false, "edit": false, "bash": false }
     },
     "ida": {
-      "description": "Wissenschaftliche Psychologie-Expertin – einfühlsam, fundiert",
+      "description": "Psychologie-Expertin – empathische Gesprächsführung und wissenschaftliche Fundierung",
       "prompt": "Vollständiger Vertrag: Team/Ida - Psychologin/AGENTS.md",
       "tools": { "write": false, "edit": false, "bash": false }
     },
@@ -47,11 +47,6 @@
     "frieda": {
       "description": "HR-Expertin – Team-Erweiterung, neue Spezialisten, Rollen",
       "prompt": "Vollständiger Vertrag: Team/Frieda - HR-Expertin/AGENTS.md",
-      "tools": { "write": false, "edit": false, "bash": false }
-    },
-    "lea": {
-      "description": "Psychotherapie-Expertin – klinische Psychologie, Therapiemethoden",
-      "prompt": "Vollständiger Vertrag: Team/Lea - Psychotherapie-Expertin/AGENTS.md",
       "tools": { "write": false, "edit": false, "bash": false }
     },
     "tara": {

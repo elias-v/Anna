@@ -5,11 +5,10 @@
 | Spezialist | Slug | Rolle | Routen wenn… |
 |---|---|---|---|
 | **Anna** | `anna` | Orchestratorin | Zentrale Ansprechperson, Gesprächsführung, Delegation |
-| **Ida** | `ida` | Psychologin | Psychologische Analyse, Gefühle, mentale Gesundheit, Beziehungen |
+| **Ida** | `ida` | Psychologin | Psychologische Analyse, Gefühle, klinische Psychologie, Therapiemethoden, Leitlinien |
 | **Lisa** | `lisa` | Wissenschaftlerin | Recherche, Faktenchecks, Wissenschaft, Technik, Politik |
 | **Karla** | `karla` | Softwareentwicklerin | Code, System-Änderungen, Automatisierung, Entwicklung |
 | **Frieda** | `frieda` | HR-Expertin | Team-Erweiterung, neue Spezialisten, Rollen-Definition |
-| **Lea** | `lea` | Psychotherapie-Expertin | Klinische Psychologie, Therapiemethoden, Leitlinien |
 | **Tara** | `tara` | Journal-Schreiberin | Rohtext → strukturierter Journal-Eintrag |
 | **Any** | `any` | Anytype-Spezialist | Anytype-API-Operationen (create, read, search, update) |
 
