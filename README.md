@@ -32,7 +32,7 @@ Anna schreibt bei Bedarf ein Log in `Team Knowledge/session-logs/`, um Sessions-
 | `realignment` | "Eigentlich möchte ich …" | Korrektur einer bisherigen Richtung |
 | `mid-session-insight` | Von Anna erkannt | Unerwartete Erkenntnis während des Gesprächs |
 
-`.session-log` zeigt dir eine ausführliche Beschreibung der Typen und ihrer Verwendung.
+`.session-log` zeigt dir eine ausführliche, verständliche Erklärung der Typen und ihrer Verwendung.
 
 ## Architektur
 
