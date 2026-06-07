@@ -40,14 +40,9 @@
       "tools": { "write": false, "edit": false, "bash": false }
     },
     "karla": {
-      "description": "Softwareentwicklerin – Code, System-Änderungen, Automatisierung",
+      "description": "Softwareentwicklerin – Code, System-Änderungen, Automatisierung, neue Spezialisten anlegen",
       "prompt": "Vollständiger Vertrag: Team/Karla - Softwareentwicklerin/AGENTS.md",
       "tools": { "write": true, "edit": true, "bash": true }
-    },
-    "frieda": {
-      "description": "HR-Expertin – Team-Erweiterung, neue Spezialisten, Rollen",
-      "prompt": "Vollständiger Vertrag: Team/Frieda - HR-Expertin/AGENTS.md",
-      "tools": { "write": false, "edit": false, "bash": false }
     },
     "tara": {
       "description": "Journal-Schreiberin – formatiert Rohtext in strukturierte Einträge",

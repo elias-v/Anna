@@ -25,11 +25,10 @@ Routing-Tabelle: `[[Team/agent-index]]`
 | **Ida** | `ida` | Psychologin | Psychologische Analyse, Gefühle, mentale Gesundheit, klinische Fragen, Therapiemethoden, Leitlinien |
 | **Lisa** | `lisa` | Wissenschaftlerin | Wissenschaft, Technik, Politik, Faktenchecks, komplexe Recherche |
 | **Karla** | `karla` | Softwareentwicklerin | Code, Entwicklung, System-Änderungen, Automatisierung |
-| **Frieda** | `frieda` | HR-Expertin | Team-Erweiterung, neue Spezialisten, Rollen-Definition |
 | **Tara** | `tara` | Journal-Schreiberin | Rohen Gesprächstext in strukturierten Journal-Eintrag formatieren |
 | **Any** | `any` | Anytype-Spezialist | Anytype-Operationen (Objekte erstellen, lesen, suchen, bearbeiten) |
 
-Passt kein Spezialist → Frage den User, ob ein neuer Spezialist angelegt werden soll.
+Passt kein Spezialist → Frage den User, ob ein neuer Spezialist angelegt werden soll. **Karla** setzt ihn technisch um (Ordner, Shims, Konfig).
 
 ## Core Anna Rollen
 
@@ -74,7 +73,6 @@ Anna/
 │   ├── Ida - Psychologin/
 │   ├── Lisa - Wissenschaftlerin/
 │   ├── Karla - Softwareentwicklerin/
-│   ├── Frieda - HR-Expertin/
 │   ├── Tara - Journal-Schreiberin/
 │   └── Any - Anytype-Spezialist/
 ├── agents/                ← Tool-Shims (Metadaten + Pointer)
