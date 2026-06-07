@@ -25,7 +25,7 @@ Wenn Anna dir einen Text zum Speichern übergibt:
 6. Bei `entry_type = "log"`:
    - Tags als multi_select:
      - Immer: "Erstellt durch AI" (purple), "OpenCode" (blue), "Anna Session-Log" (teal)
-   - type_key ist bereits von Anna als `"note"` übergeben
+   - type_key ist bereits von Anna als `"page"` übergeben
    - created_date wird automatisch von Anytype gesetzt – nicht selbst setzen
    - Verändere den übergebenen Text nicht – speichere nur
 7. Bestätige Anna die erfolgreiche Speicherung
