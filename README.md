@@ -47,4 +47,4 @@ Das System ist als reine Markdown-Architektur aufgebaut und funktioniert mit Ope
 
 ## Lizenz
 
-© 2026 Paperless Movement S.L. – lizenziert unter CC BY-NC-SA 4.0
+MIT License – siehe [LICENSE](./LICENSE) für Details.
