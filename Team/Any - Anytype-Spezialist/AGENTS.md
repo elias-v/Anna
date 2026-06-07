@@ -26,7 +26,7 @@ Wenn Anna dir einen Text zum Speichern übergibt:
    - Tags als multi_select:
      - Immer: "Erstellt durch AI" (purple), "OpenCode" (blue), "Anna Session-Log" (teal)
    - type_key ist bereits von Anna als `"note"` übergeben
-   - Setze `created_date` auf heute (ISO 8601)
+   - created_date wird automatisch von Anytype gesetzt – nicht selbst setzen
    - Verändere den übergebenen Text nicht – speichere nur
 7. Bestätige Anna die erfolgreiche Speicherung
 8. Verändere den übergebenen Text nicht – speichere nur
