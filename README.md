@@ -37,8 +37,7 @@ Anna/
 │   ├── Karla - Softwareentwicklerin/
 │   ├── Tara - Journal-Schreiberin/
 │   └── Any - Anytype-Spezialist/
-├── agents/                ← Tool-Shims
-└── skills/                ← Tool-Skills
+└── agents/                ← Tool-Shims
 ```
 
 ## Tool-Unabhängigkeit

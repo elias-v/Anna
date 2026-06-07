@@ -93,6 +93,5 @@ Anna/
 │   ├── Tara - Journal-Schreiberin/
 │   └── Any - Anytype-Spezialist/
 ├── .user.yaml             ← Username (SSOT für {{USER_NAME}})
-├── agents/                ← Tool-Shims (Metadaten + Pointer)
-└── skills/                ← Tool-spezifische Skills
+└── agents/                ← Tool-Shims (Metadaten + Pointer)
 ```
