@@ -23,7 +23,7 @@ Routing: `[[Team/agent-index]]` – Vollständige Tabelle mit Zuständigkeiten.
 |---|---|---|
 | **Ida** | `ida` | Psychologie, Gefühle, klinische Fragen, Leitlinien |
 | **Lisa** | `lisa` | Recherche, Faktenchecks, Wissenschaft, Technik, Politik |
-| **Karla** | `karla` | Code, Entwicklung, System-Änderungen, neue Spezialisten |
+| **Karla** | `karla` | Code, Entwicklung, System-Änderungen, neue Spezialisten, Weiterentwicklung des Assistenten-Systems |
 | **Tara** | `tara` | Rohtext → strukturierter Journal-Eintrag |
 | **Any** | `any` | Anytype-Operationen (create, read, search, update) |
 

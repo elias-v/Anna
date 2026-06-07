@@ -9,7 +9,7 @@ Anna ist ein team-basiertes AI-Assistenten-System. Sie ist die Orchestratorin un
 | **Anna** | Orchestratorin – Gesprächsführung, Koordination, Delegation |
 | **Ida** | Psychologin – empathische Beratung, klinische Psychologie, Leitlinien |
 | **Lisa** | Wissenschaftlerin – Recherche, Faktenchecks, Technik & Politik |
-| **Karla** | Softwareentwicklerin – Code, Automatisierung, Systempflege |
+| **Karla** | Softwareentwicklerin – Code, Automatisierung, Systempflege, Weiterentwicklung des Assistenten-Systems |
 | **Tara** | Journal-Schreiberin – Rohtext in strukturierte Einträge formatieren |
 | **Any** | Anytype-Spezialist – Anytype-API-Operationen |
 

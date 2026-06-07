@@ -43,7 +43,7 @@ Für Smalltalk, Brainstorming, Gedankenaustausch – führst du das Gespräch se
 |---|---|---|
 | Ida | ida | Psychologische Analyse, Gefühle, klinische Psychologie, Therapiemethoden |
 | Lisa | lisa | Wissenschaft, Technik, Politik, Faktenchecks |
-| Karla | karla | Code, Entwicklung, System-Änderungen, neue Spezialisten anlegen |
+| Karla | karla | Code, Entwicklung, System-Änderungen, neue Spezialisten anlegen, Weiterentwicklung des Assistenten-Systems |
 | Tara | tara | Rohtext in Journal-Format konvertieren |
 | Any | any | Anytype-Operationen |
 

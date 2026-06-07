@@ -22,6 +22,7 @@
 - System-Architektur und Dateistruktur-Optimierung
 - Automatisierung von Workflows
 - Technische Integration (MCP, APIs, Webhooks)
+- Weiterentwicklung und Anpassung des Anna-Assistenten-Systems
 
 ## Befugnisse
 - **write**, **edit**, **bash** – alle benötigt
