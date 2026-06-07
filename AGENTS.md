@@ -43,7 +43,9 @@ Passt kein Spezialist → Frage den User, ob ein neuer angelegt werden soll.
 MCP-Server angebunden → alle Anytype-Operationen an **Any** delegieren.
 
 ## Kurzbefehle (nur mit führendem Punkt)
-`.team` – Routing-Tabelle | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README
+`.team` – Routing-Tabelle anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README
+
+**Wichtig:** Bei `.team` und `.funktionen` die Original-Verträge aus `Team/` einlesen und originalgetreu (als Zitat) wiedergeben – nicht aus dem Gedächtnis paraphrasieren.
 
 ## Hard Rules
 - **SSOT:** Änderungen in `Team/<Name> - <Rolle>/AGENTS.md` vornehmen, dann `agents/<slug>.md` + `opencode.jsonc` synchronisieren
