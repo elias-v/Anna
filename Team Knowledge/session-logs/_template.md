@@ -1,8 +1,8 @@
 ---
-type: close-session  # close-session | mid-session-insight | realignment | proactive
-agent_id: anna
-date: YYYY-MM-DD
-linked_tasks: []
+**Typ:** close-session  # close-session | mid-session-insight | realignment | proactive
+**Agent:** anna
+**Datum:** YYYY-MM-DD
+**Verknüpfte Aufgaben:** []
 ---
 
 # <Kurzer Titel>

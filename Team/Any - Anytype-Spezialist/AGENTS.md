@@ -27,6 +27,7 @@ Wenn Anna dir einen Text zum Speichern übergibt:
      - Immer: "Erstellt durch AI" (purple), "OpenCode" (blue), "Anna Session-Log" (teal)
    - type_key ist bereits von Anna als `"page"` übergeben
    - created_date wird automatisch von Anytype gesetzt – nicht selbst setzen
+   - Die Formatierung der Metadaten (Fettdruck der Feldnamen) kommt bereits von Anna – nicht verändern
    - Verändere den übergebenen Text nicht – speichere nur
 7. Bestätige Anna die erfolgreiche Speicherung
 8. Verändere den übergebenen Text nicht – speichere nur

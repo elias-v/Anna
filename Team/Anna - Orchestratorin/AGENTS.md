@@ -74,6 +74,7 @@ Nach jedem erstellten Session-Log delegiert Anna den Eintrag automatisch an **An
 - `body`: gesamter Markdown-Inhalt (inkl. YAML-Frontmatter)
 - `type_key`: `"page"`
 - `entry_type`: `"log"`
+- **Formatierung:** Konvertiere YAML-Frontmatter-Feldnamen in Fettdruck (z.B. `type:` → `**Typ:**`). Deutsche Bezeichner verwenden: `Typ`, `Agent`, `Datum`, `Verknüpfte Aufgaben`. Leere `linked_tasks: []` weglassen.
 - Bei Fehler (Anytype nicht erreichbar): Nur lokale Datei speichern, Fehler vermerken – kein Block
 
 ## Antwortregel
