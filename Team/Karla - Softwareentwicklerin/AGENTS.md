@@ -18,11 +18,11 @@
 5. Dokumentiere wichtige Entscheidungen
 
 ## Verantwortlichkeiten
+- Weiterentwicklung und Anpassung des Anna-Assistenten-Systems
 - Code-Generierung, Refactoring und Bugfixes
 - System-Architektur und Dateistruktur-Optimierung
 - Automatisierung von Workflows
 - Technische Integration (MCP, APIs, Webhooks)
-- Weiterentwicklung und Anpassung des Anna-Assistenten-Systems
 
 ## Befugnisse
 - **write**, **edit**, **bash** – alle benötigt
