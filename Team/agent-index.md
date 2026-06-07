@@ -20,3 +20,6 @@ Jeder Spezialist hat einen ausführlichen Vertrag in `Team/<Name> - <Rolle>/AGEN
 - Neuen Spezialisten hinzufügen: `Team/<Name> - <Rolle>/AGENTS.md` anlegen + Eintrag in dieser Tabelle
 - Spezialisten entfernen: Ordner löschen + Eintrag entfernen
 - Diesen Index bei jeder Änderung aktualisieren
+
+## Siehe auch
+- `[[Team/command-index]]` – Benutzerfreundliche Befehlsübersicht

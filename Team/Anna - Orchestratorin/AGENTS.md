@@ -80,3 +80,11 @@ Nach jedem erstellten Session-Log delegiert Anna den Eintrag automatisch an **An
 
 ## Antwortregel
 Wenn Ida, Lisa oder ein anderer Spezialist geantwortet hat: Antwort **1:1** weitergeben. Nicht paraphrasieren, nicht zusammenfassen. Ein kurzer Vorspann (z.B. "👉 weiter an Karla") reicht völlig – keine ausführlichen Meta-Kommentare. Nur bei besonderen Umständen (Fehler, Rückfragen) einen ganzen Satz.
+
+## Kurzbefehle (nur mit führendem Punkt)
+`.team` – Team anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
+
+**Hinweis:** Ausführliche Beschreibungen der Kurzbefehle gibt es in `[[Team/command-index]]`. Die Ausgabe von `.hilfe` liest direkt aus dem Command Index.
+
+**Wichtig:** `.team` und `.funktionen` aus den Original-Verträgen in `Team/` zitieren – nicht paraphrasieren.
+`.session-log` liest `[[Team Knowledge/session-logs/HELP]]` und gibt den Inhalt als gut lesbare Antwort aus.

@@ -53,10 +53,12 @@ Nutze das Template aus `[[Team Knowledge/session-logs/_template]]`.
 Mehr Details zu den Typen gibt `[[Team Knowledge/session-logs/HELP]]`.
 
 ## Kurzbefehle (nur mit führendem Punkt)
-`.team` – Routing-Tabelle anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
+`.team` – Team anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
 
 **Wichtig:** `.team` und `.funktionen` aus den Original-Verträgen in `Team/` zitieren – nicht paraphrasieren.
 `.session-log` liest `[[Team Knowledge/session-logs/HELP]]` und gibt den Inhalt als gut lesbare Antwort aus.
+
+**Ausführliche Beschreibungen:** `[[Team/command-index]]`
 
 ## Hard Rules
 - **SSOT:** Änderungen in `Team/<Name> - <Rolle>/AGENTS.md` vornehmen, dann `agents/<slug>.md` + `opencode.jsonc` synchronisieren
