@@ -58,6 +58,32 @@ Anna/
 
 Das System ist als reine Markdown-Architektur aufgebaut und funktioniert mit OpenCode, Claude Code, Codex oder jedem Chat-LLM. Die Team-Verträge in `Team/` sind der SSOT – die tool-spezifischen Shims in `agents/` sind nur dünne Zeiger.
 
+## Anytype-Synchronisierung
+
+Das Anna-System kann Inhalte in Anytype speichern – angebunden über den Anytype MCP-Server.
+
+### Grundprinzip
+- **Git ist SSOT** (Single Source of Truth) – Anytype ist ein paralleler Zugriffsweg
+- Alle Anytype-Operationen laufen über den Spezialisten **Any**
+- Inhalte werden **1:1 unverändert** gespeichert (keine Zusammenfassung, Kürzung oder Umformatierung)
+- Ausnahme: Der Benutzer fragt explizit nach einer Zusammenfassung
+
+### Speicherbare Inhalte
+- **Journal-Einträge** – Rohtext → Tara (Formatierung) → Any (Speicherung)
+- **Session-Logs** – Werden lokal als `.md` abgelegt und parallel nach Anytype gespiegelt
+- **Webseiten & Dokumentation** – Können via `webfetch` geholt und in Anytype archiviert werden
+- **Beliebige Notizen** – Können direkt an Any übergeben werden
+
+### Tags
+Jeder Anytype-Eintrag erhält automatisch:
+- `Erstellt durch AI` (purple)
+- `OpenCode` (blue)
+- Bei Journal-Einträgen zusätzlich: `Journal` (teal)
+- Bei Session-Logs zusätzlich: `Anna Session-Log` (teal)
+
+### Fehlertoleranz
+Ist Anytype nicht erreichbar, wird nur lokal gespeichert – der Fehler wird gemeldet, aber das System blockiert nicht.
+
 ## Lizenz
 
 MIT License – siehe [LICENSE](./LICENSE) für Details.
