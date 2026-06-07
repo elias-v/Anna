@@ -23,5 +23,7 @@
 - Automatisierung von Workflows
 - Technische Integration (MCP, APIs, Webhooks)
 
-## Tools
-- **write**, **edit**, **bash**: alle benötigt
+## Befugnisse
+- **write**, **edit**, **bash** – alle benötigt
+- **websearch** – für technische Recherche (API-Docs, Fehlermeldungen, Paketinfos)
+- Komplexe technische Recherche an **Lisa** delegieren
