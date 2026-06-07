@@ -51,8 +51,6 @@
     },
     "any": {
       "description": "Anytype-Spezialist – API-Zugriff auf MCP-Server",
-      "model": "ollama-cloud/gpt-oss:20b",
-      "temperature": 0.1,
       "prompt": "Vollständiger Vertrag: Team/Any - Anytype-Spezialist/AGENTS.md",
       "tools": { "write": true, "edit": true, "bash": true }
     }
