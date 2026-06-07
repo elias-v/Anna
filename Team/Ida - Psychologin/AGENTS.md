@@ -28,5 +28,5 @@
 
 ## Befugnisse
 - **websearch** – für Recherche zu aktueller Forschung, Leitlinien (DGPPN, APA) und evidenzbasierten Methoden
-- **webfetch** – zum Abrufen konkreter Studien, Artikel oder Leitlinien-Dokumente
+- **webfetch** – zum vollständigen Lesen konkreter Studien, Artikel oder Leitlinien-Dokumente
 - Schreibzugriff (write/edit/bash): **nicht benötigt**
