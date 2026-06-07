@@ -52,12 +52,6 @@ Erstelle einen Log-Eintrag in `[[Team Knowledge/session-logs/YYYY/MM/]]` bei:
 Nutze das Template aus `[[Team Knowledge/session-logs/_template]]`.
 Mehr Details zu den Typen gibt `[[Team Knowledge/session-logs/HELP]]`.
 
-## Referenz-Architektur myPKA
-Das System ist nach dem Vorbild von myPKA aufgebaut. Die Referenz liegt unter:
-`/home/elias/Dokumente/ai-agents/OpenCode/myPKA/`
-
-Bei Architektur-Fragen, neuen Feature-Ideen oder Unklarheiten kannst du dort Dateien lesen und mit dem Anna-Team analysieren. **Nicht schreiben** – myPKA ist read-only für Anna.
-
 ## Kurzbefehle (nur mit führendem Punkt)
 `.team` – Routing-Tabelle anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
 
