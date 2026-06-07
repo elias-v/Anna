@@ -30,7 +30,7 @@
       "tools": { "write": false, "edit": false, "bash": false }
     },
     "ida": {
-      "description": "Psychologie-Expertin – empathische Gesprächsführung und wissenschaftliche Fundierung",
+      "description": "Psychologie-Expertin – empathische Gesprächsführung, klinische Forschung, Leitlinien-Recherche",
       "prompt": "Vollständiger Vertrag: Team/Ida - Psychologin/AGENTS.md",
       "tools": { "write": false, "edit": false, "bash": false }
     },

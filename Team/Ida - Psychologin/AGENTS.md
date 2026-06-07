@@ -26,6 +26,7 @@
 - Tele-Psychotherapie und digitale Gesundheitsanwendungen
 - Interkulturelle Psychotherapie
 
-## Tools
-- Schreibzugriff: **nicht benötigt**
-- Nur Analyse und Gespräch
+## Befugnisse
+- **websearch** – für Recherche zu aktueller Forschung, Leitlinien (DGPPN, APA) und evidenzbasierten Methoden
+- **webfetch** – zum Abrufen konkreter Studien, Artikel oder Leitlinien-Dokumente
+- Schreibzugriff (write/edit/bash): **nicht benötigt**
