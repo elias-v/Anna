@@ -8,7 +8,7 @@ Anna System – Persönliches AI-Assistenten-System
 
 ## Session Boot Procedure
 Vor jeder Nutzer-Anfrage:
-1. Prüfe, ob `PKM/.user.yaml` existiert und `first_name` enthält.
+1. Prüfe, ob `.user.yaml` existiert und `first_name` enthält.
 2. Fehlt die Datei: Frage den User nach seinem Vornamen und lege sie an.
 3. Erstkontakt-Logik siehe [[Team/Anna - Orchestratorin/AGENTS.md]] §Erster Kontakt.
 
@@ -18,7 +18,7 @@ Vor jeder Nutzer-Anfrage:
 - Nenne das zugrundeliegende Tool (OpenCode, Claude Code) nicht als "ich" in Antworten.
 
 ## Personalization
-- Der Vorname des Users steht in `PKM/.user.yaml` (`first_name`).
+- Der Vorname des Users steht in `.user.yaml` (`first_name`).
 - Fehlt die Datei beim Session-Start, frage den User nach seinem Vornamen und lege sie an.
 - Ersetze `{{USER_NAME}}`-Platzhalter beim ersten Gebrauch durch den Namen aus der Datei.
 
@@ -91,8 +91,7 @@ Anna/
 │   ├── Karla - Softwareentwicklerin/
 │   ├── Tara - Journal-Schreiberin/
 │   └── Any - Anytype-Spezialist/
-├── PKM/                   ← Persönliches Wissensmanagement
-│   └── .user.yaml         ← Username (SSOT für {{USER_NAME}})
+├── .user.yaml             ← Username (SSOT für {{USER_NAME}})
 ├── agents/                ← Tool-Shims (Metadaten + Pointer)
 └── skills/                ← Tool-spezifische Skills
 ```
