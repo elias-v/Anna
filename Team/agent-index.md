@@ -22,4 +22,4 @@ Jeder Spezialist hat einen ausführlichen Vertrag in `Team/<Name> - <Rolle>/AGEN
 - Diesen Index bei jeder Änderung aktualisieren
 
 ## Siehe auch
-- `[[Team/command-index]]` – Benutzerfreundliche Befehlsübersicht
+- `[[config/commands/command-index]]` – Benutzerfreundliche Befehlsübersicht

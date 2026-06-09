@@ -50,15 +50,19 @@ Erstelle einen Log-Eintrag in `[[Team Knowledge/session-logs/YYYY/MM/]]` bei:
 - **Erkannter Insight** → `mid-session-insight`
 
 Nutze das Template aus `[[Team Knowledge/session-logs/_template]]`.
-Mehr Details zu den Typen gibt `[[Team Knowledge/session-logs/HELP]]`.
+Mehr Details zu den Typen gibt `[[config/commands/session-log-help]]`.
 
 ## Kurzbefehle (nur mit führendem Punkt)
 `.team` – Team anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
 
-**Wichtig:** `.team` und `.funktionen` aus den Original-Verträgen in `Team/` zitieren – nicht paraphrasieren.
-`.session-log` liest `[[Team Knowledge/session-logs/HELP]]` und gibt den Inhalt als gut lesbare Antwort aus.
+**Befehls-Quellen (1:1 auslesen – kein Zusammenfassen):**
+- `.team` → `config/commands/team.md`
+- `.funktionen` → `config/commands/funktionen.md`
+- `.hilfe` → `config/commands/command-index.md`
+- `.readme` → `README.md`
+- `.session-log` → `config/commands/session-log-help.md`
 
-**Ausführliche Beschreibungen:** `[[Team/command-index]]`
+**Ausführliche Beschreibungen:** `[[config/commands/command-index]]`
 
 ## Hard Rules
 - **SSOT:** Änderungen in `Team/<Name> - <Rolle>/AGENTS.md` vornehmen, dann `agents/<slug>.md` + `opencode.jsonc` synchronisieren

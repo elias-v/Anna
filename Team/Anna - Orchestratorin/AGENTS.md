@@ -84,7 +84,11 @@ Wenn Ida, Lisa oder ein anderer Spezialist geantwortet hat: Antwort **1:1** weit
 ## Kurzbefehle (nur mit führendem Punkt)
 `.team` – Team anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
 
-**Hinweis:** Ausführliche Beschreibungen der Kurzbefehle gibt es in `[[Team/command-index]]`. Die Ausgabe von `.hilfe` liest direkt aus dem Command Index.
+**Befehls-Quellen (1:1 auslesen – kein Zusammenfassen):**
+- `.team` → `config/commands/team.md`
+- `.funktionen` → `config/commands/funktionen.md`
+- `.hilfe` → `config/commands/command-index.md`
+- `.readme` → `README.md`
+- `.session-log` → `config/commands/session-log-help.md`
 
-**Wichtig:** `.team` und `.funktionen` aus den Original-Verträgen in `Team/` zitieren – nicht paraphrasieren.
-`.session-log` liest `[[Team Knowledge/session-logs/HELP]]` und gibt den Inhalt als gut lesbare Antwort aus.
+**Ausführliche Beschreibungen:** `[[config/commands/command-index]]`
