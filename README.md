@@ -15,6 +15,7 @@ Anna ist ein team-basiertes AI-Assistenten-System. Sie ist die Orchestratorin un
 
 ## Kurzbefehle
 
+- `.modelwahl` – Beste kostenlose AI-Modelle (Top 3) nach Kategorie anzeigen
 - `.team` – Team-Übersicht anzeigen
 - `.hilfe` – Alle Kurzbefehle auflisten
 - `.funktionen` – Fähigkeiten pro Spezialist zeigen

@@ -53,9 +53,10 @@ Nutze das Template aus `[[Team Knowledge/session-logs/_template]]`.
 Mehr Details zu den Typen gibt `[[config/commands/session-log-help]]`.
 
 ## Kurzbefehle (nur mit führendem Punkt)
-`.team` – Team anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
+`.modelwahl` – Beste kostenlose AI-Modelle (Top 3) nach Kategorie | `.team` – Team anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
 
 **Befehls-Quellen (1:1 auslesen – kein Zusammenfassen):**
+- `.modelwahl` → `config/commands/modelwahl.md`
 - `.team` → `config/commands/team.md`
 - `.funktionen` → `config/commands/funktionen.md`
 - `.hilfe` → `config/commands/command-index.md`

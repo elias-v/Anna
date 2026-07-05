@@ -78,7 +78,7 @@ Zeigt dir alle Teammitglieder mit ihren Rollen, Zitaten und Befugnissen auf eine
 
 **Kurzbefehl:** → `.hilfe`
 
-Listet alle verfügbaren Kurzbefehle auf (`.team`, `.funktionen`, `.readme`, `.session-log`, `.hilfe`).
+Listet alle verfügbaren Kurzbefehle auf (`.modelwahl`, `.team`, `.funktionen`, `.readme`, `.session-log`, `.hilfe`).
 
 ---
 
