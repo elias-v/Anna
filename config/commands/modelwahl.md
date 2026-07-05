@@ -2,11 +2,17 @@
 
 **Führe folgende Recherche durch und formatiere das Ergebnis exakt wie unten beschrieben:**
 
-1. **Recherchiere** die aktuell (heutiges Datum) kostenlos nutzbaren AI-Modelle auf folgenden Plattformen: Ollama Cloud, OpenRouter. OpenCode Zen ist eingebaut, aber Modelle dort sind ebenfalls relevant.
+1. **Recherchiere** die aktuell (heutiges Datum) kostenlos nutzbaren AI-Modelle auf folgenden Plattformen:
+   - **OpenCode Zen**: Offizielle Seite prüfen (opencode.ai/docs/de/zen/)
+   - **Ollama Cloud**: Offizielle Seite prüfen (ollama.com/pricing)
+   - **OpenRouter**: Offizielle Sammlung prüfen (openrouter.ai/collections/free-models)
 2. **Gruppiere** die Modelle in genau diese vier Kategorien: **Allgemeines Reasoning**, **Coding**, **Agentisches Arbeiten**, **Websuche**
 3. **Wähle pro Kategorie die 3 besten Modelle** aus (Platz 1 = bestes, Platz 2 = zweitbestes, Platz 3 = drittbestes)
 4. **Gib NUR die Liste aus** – keine Einleitung, keine Erklärungen, keine Quellenangaben, keine Hinweise
-5. **Formatvorgabe (exakt einhalten):**
+5. **Gib vor der Liste eine Info-Zeile** mit folgendem Text aus:
+   _Modelle nutzen mit: `/model alias` im Chat (z. B. `/model or-nemotron-ultra`). Nach Config-Änderung: `Ctrl+R` zum Neuladen._
+6. **Verifiziere jedes Modell explizit!** Nur Modelle auflisten, die du mit einer Quelle (z.B. offizielle Preiseite des Anbieters) bestätigen kannst. Bei Zweifeln: NICHT auflisten, sondern weglassen. Nur Modelle auflisten, deren Verfügbarkeit als "kostenlos" du mit einer Quelle bestätigst.
+7. **Formatvorgabe (exakt einhalten):**
 
 ```
 **Allgemeines Reasoning**
