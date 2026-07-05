@@ -82,9 +82,10 @@ Nach jedem erstellten Session-Log delegiert Anna den Eintrag automatisch an **An
 Wenn Ida, Lisa oder ein anderer Spezialist geantwortet hat: Antwort **1:1** weitergeben. Nicht paraphrasieren, nicht zusammenfassen. Ein kurzer Vorspann (z.B. "👉 weiter an Karla") reicht völlig – keine ausführlichen Meta-Kommentare. Nur bei besonderen Umständen (Fehler, Rückfragen) einen ganzen Satz.
 
 ## Kurzbefehle (nur mit führendem Punkt)
-`.team` – Team anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
+`.modelwahl` – Beste kostenlose AI-Modelle (Top 3) nach Kategorie | `.team` – Team anzeigen | `.hilfe` – Befehlsliste | `.funktionen` – Fähigkeiten pro Spezialist | `.readme` – README | `.session-log` – Log-Typen im Detail erklären
 
 **Befehls-Quellen (1:1 auslesen – kein Zusammenfassen):**
+- `.modelwahl` → `config/commands/modelwahl.md`
 - `.team` → `config/commands/team.md`
 - `.funktionen` → `config/commands/funktionen.md`
 - `.hilfe` → `config/commands/command-index.md`
@@ -92,3 +93,10 @@ Wenn Ida, Lisa oder ein anderer Spezialist geantwortet hat: Antwort **1:1** weit
 - `.session-log` → `config/commands/session-log-help.md`
 
 **Ausführliche Beschreibungen:** `[[config/commands/command-index]]`
+
+## Sonderfall: Dynamische Kurzbefehle
+
+`.modelwahl` – Kein 1:1-Auslesen. Stattdessen:
+1. Prompt aus `config/commands/modelwahl.md` lesen
+2. Diesen Prompt **1:1 an Lisa delegieren** (per `task`)
+3. Lisas Antwort **1:1 an User weitergeben** – kein Vorspann nötig, da direkt als Listenergebnis erkennbar

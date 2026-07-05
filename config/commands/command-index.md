@@ -4,11 +4,12 @@
 
 | Befehl | Beschreibung | Quelle |
 |---|---|---|
-| `.team` | Zeige alle Team-Mitglieder und ihre Aufgaben | `config/commands/team.md` |
-| `.hilfe` | Liste alle verfügbaren Kurzbefehle auf | `config/commands/command-index.md` |
 | `.funktionen` | Zeige die Fähigkeiten jedes Spezialisten | `config/commands/funktionen.md` |
-| `.session-log` | Erkläre die verschiedenen Log-Typen | `config/commands/session-log-help.md` |
+| `.hilfe` | Liste alle verfügbaren Kurzbefehle auf | `config/commands/command-index.md` |
+| `.modelwahl` | Zeigt die besten kostenlosen AI-Modelle (Top 3) gruppiert nach Kategorie | `config/commands/modelwahl.md` |
 | `.readme` | Zeige die README-Datei des Anna-Systems an | `README.md` |
+| `.session-log` | Erkläre die verschiedenen Log-Typen | `config/commands/session-log-help.md` |
+| `.team` | Zeige alle Team-Mitglieder und ihre Aufgaben | `config/commands/team.md` |
 
 ## Wartung
 
