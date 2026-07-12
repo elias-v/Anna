@@ -13,27 +13,32 @@
    _Modelle nutzen mit: `/model alias` im Chat (z. B. `/model or-nemotron-ultra`). Nach Config-Änderung: `Ctrl+R` zum Neuladen._
 6. **Verifiziere jedes Modell explizit!** Nur Modelle auflisten, die du mit einer Quelle (z.B. offizielle Preiseite des Anbieters) bestätigen kannst. Bei Zweifeln: NICHT auflisten, sondern weglassen. Nur Modelle auflisten, deren Verfügbarkeit als "kostenlos" du mit einer Quelle bestätigst.
 7. **Formatvorgabe (exakt einhalten):**
+8. **Füge den Alias in Backticks** hinter jedem Modellnamen ein:
+   - **OpenCode Zen** → Präfix `opencode-`, z. B. `opencode-nemotron-ultra`
+   - **OpenRouter** → Präfix `or-`, z. B. `or-nemotron-ultra`
+   - **Ollama Cloud** → Präfix `ollama-`, z. B. `ollama-gpt-oss-120b`
+   - Wenn ein Modell auf mehreren Plattformen verfügbar ist, den Alias der **primären** Plattform nennen.
 
 ```
 **Allgemeines Reasoning**
-1. Modellname (Provider)
-2. Modellname (Provider)
-3. Modellname (Provider)
+1. Modellname (`alias`) (Provider)
+2. Modellname (`alias`) (Provider)
+3. Modellname (`alias`) (Provider)
 
 **Coding**
-1. Modellname (Provider)
-2. Modellname (Provider)
-3. Modellname (Provider)
+1. Modellname (`alias`) (Provider)
+2. Modellname (`alias`) (Provider)
+3. Modellname (`alias`) (Provider)
 
 **Agentisches Arbeiten**
-1. Modellname (Provider)
-2. Modellname (Provider)
-3. Modellname (Provider)
+1. Modellname (`alias`) (Provider)
+2. Modellname (`alias`) (Provider)
+3. Modellname (`alias`) (Provider)
 
 **Websuche**
-1. Modellname (Provider)
-2. Modellname (Provider)
-3. Modellname (Provider)
+1. Modellname (`alias`) (Provider)
+2. Modellname (`alias`) (Provider)
+3. Modellname (`alias`) (Provider)
 ```
 
 - Jede Kategorie beginnt mit **Fettdruck** des Kategorienamens
@@ -42,6 +47,7 @@
 - Keine Einleitung oder Abschlusskommentare
 - Provider in Klammern, z. B. (OpenRouter), (Ollama Cloud), (OpenCode Zen)
 - Bei Modellen, die auf mehreren Plattformen verfügbar sind: (OpenCode Zen / OpenRouter)
+- Das Alias des Modells steht in Backticks hinter dem Modellnamen
 - Die Liste ist absteigend sortiert: Platz 1 = bestes Modell, Platz 3 = drittbestes (schwächstes) der drei
 
 **Wichtig:** Die Recherche muss aktuell sein (heutiges Datum). Die Ausgabe muss bei jedem Durchlauf gleich aussehen – nur die Modellnamen können sich ändern, wenn das Angebot sich geändert hat.

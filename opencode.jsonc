@@ -57,39 +57,5 @@
   },
 
   // Standard-Agent
-  "default_agent": "anna",
-
-  "model": {
-    "aliases": {
-      // OpenCode Zen (eingebaut)
-      "opencode-big-pickle": "opencode/big-pickle",
-      "opencode-deepseek-v4": "opencode/deepseek-v4-flash-free",
-      "opencode-mimo": "opencode/mimo-v2.5-free",
-      "opencode-north-mini": "opencode/north-mini-code-free",
-      "opencode-nemotron-ultra": "opencode/nemotron-3-ultra-free",
-
-      // Ollama Cloud
-      "ollama-gpt-oss-120b": "ollama-cloud/gpt-oss:120b",
-      "ollama-gpt-oss-20b": "ollama-cloud/gpt-oss:20b",
-      "ollama-qwen-coder": "ollama-cloud/qwen3-coder-next",
-
-      // OpenRouter (kostenlos mit :free)
-      "or-nemotron-ultra": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
-      "or-nemotron-super": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
-      "or-nemotron-nano": "openrouter/nvidia/nemotron-3-nano-30b-a3b:free",
-      "or-gpt-oss-120b": "openrouter/openai/gpt-oss-120b:free",
-      "or-gpt-oss-20b": "openrouter/openai/gpt-oss-20b:free",
-      "or-gemma-4-31b": "openrouter/google/gemma-4-31b-it:free",
-      "or-gemma-4-26b": "openrouter/google/gemma-4-26b-a4b-it:free",
-      "or-qwen-coder": "openrouter/qwen/qwen3-coder:free",
-      "or-qwen-next": "openrouter/qwen/qwen3-next-80b-a3b-instruct:free",
-      "or-llama-70b": "openrouter/meta-llama/llama-3.3-70b-instruct:free",
-      "or-llama-3b": "openrouter/meta-llama/llama-3.2-3b-instruct:free",
-      "or-laguna-m1": "openrouter/poolside/laguna-m.1:free",
-      "or-laguna-xs2": "openrouter/poolside/laguna-xs-2.1:free",
-      "or-north-mini": "openrouter/cohere/north-mini-code:free",
-      "or-hermes-405b": "openrouter/nousresearch/hermes-3-llama-3.1-405b:free",
-      "or-free-router": "openrouter/openrouter/free"
-    }
-  }
+  "default_agent": "anna"
 }
